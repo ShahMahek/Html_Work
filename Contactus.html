@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <title>ThakkarHiten-Q7</title>
+        <style>
+            .box1
+            {
+                background-color: yellow;
+                height: 250px;
+                width: 550px;
+                position: absolute;
+                top: 50px;
+                left: 500px;
+            }
+            .box2
+            {
+                background-color: yellow;
+                height: 250px;
+                width: 550px;
+                position: absolute;
+                top: 400px;
+                left: 500px;
+            }
+            .box3
+            {
+                background-color: white;
+                height: 500px;
+                width: 350px;
+                box-shadow: 5px 5px 15px black;
+                position: absolute;
+                top: 100px;
+                left: 600px;
+                
+            }
+            h3
+            {
+                background-color: plum;
+                height: 30px;
+                width: 300px;
+            }
+            form
+            {
+                padding: 30px;
+            }
+        </style>
+        <script>
+    function validate(){
+          var name = document.getElementById("name").value;
+          var phone = document.getElementById("phone").value;
+          var email = document.getElementById("email").value;
+          var error_message = document.getElementById("error_message");
+          error_message.style.padding = "10px";
+          var text;
+          if(name.length < 4)
+          {
+                text = "Please Enter valid Name";
+                error_message.innerHTML = text;
+                return false;
+          }
+          
+          if(isNaN(phone) || phone.length != 10)
+          {
+                text = "Please Enter valid Phone Number";
+                error_message.innerHTML = text;
+                return false;
+          }
+          if(email.indexOf("@") == -1 )
+          {
+                text = "Please Enter valid Email";
+                error_message.innerHTML = text;
+                return false;
+          }
+                alert("Form Submitted Successfully!");
+          return true;
+        }
+    </script>
+    </head>
+    <body>
+      <div class=box1></div>
+      <div class=box2></div>
+      <div class=box3>
+          <center><h1>CONTACT US</h1></center>
+          <center><h3>Please Enter Valid Name</h3></center>
+          <div id="error_message"></div>
+          <form id="myform" onsubmit="return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Name" id="name" required>
+            </div><br><br>
+            <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject" required>
+            </div><br><br>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone" required>
+            </div><br><br>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email" required>
+            </div><br><br>
+            <div class="input_field">
+                <textarea placeholder="Message" id="message" required></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+          </form>
+      </div> 
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+
+    <title> Calculator</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e0e5ec;
+            font-family: "Montserrat", sans-serif;
+            outline: none;
+        }
+
+        .Container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Calculator {
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+            display: grid;
+            grid-template-columns: repeat(4, 75px);
+        }
+
+        input {
+            grid-column: span 4;
+            width: 100%;
+            height: 150px;
+            box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #f2f3f5;
+            border: none;
+            border-radius: 10px;
+            color: rgb(70, 70, 70);
+            text-align: end;
+            font-size: 50px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            text-align: center;
+            width: 60px;
+            height: 60px;
+            font-size: 17px;
+            display: grid;
+            place-content: center;
+            border: none;
+            border-radius: 50%;
+            color: rgb(70, 70, 70);
+            box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+            margin: 8px;
+        }
+
+        button:hover {
+            background: black;
+            color: #f2f3f5;
+        }
+
+        .Equal {
+            width: 132px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="Calculator">
+            <input type="text" placeholder="0" id="OutputScreen" />
+            <button onclick="Clear()">CL</button>
+            <button onclick="Delete()">DEL</button>
+            <button onclick="Display('%')">%</button>
+            <button onclick="Display('/')">/</button>
+            <button onclick="Display('7')">7</button>
+            <button onclick="Display('8')">8</button>
+            <button onclick="Display('9')">9</button>
+            <button onclick="Display('*')">*</button>
+            <button onclick="Display('4')">4</button>
+            <button onclick="Display('5')">5</button>
+            <button onclick="Display('6')">6</button>
+            <button onclick="Display('-')">-</button>
+            <button onclick="Display('1')">1</button>
+            <button onclick="Display('2')">2</button>
+            <button onclick="Display('3')">3</button>
+            <button onclick="Display('+')">+</button>
+            <button onclick="Display('0')">0</button>
+            <button onclick="Display('.')">.</button>
+            <button onclick="Calculate()" class="Equal">=</button>
+        </div>
+    </div>
+    <script>
+        let a = document.getElementById("a");
+        function Display(num) {
+            OutputScreen.value += num;
+        }
+        function Calculate() {
+            try {
+                a.value = eval(a.value);
+            } catch (error) {
+                alert("Invalid");
+            }
+        }
+        function Clear() {
+            a.value = "";
+        }
+        function Delete() {
+            a.value = a.value.slice(0, -1);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Animation4_ImgMoving</title>
+        <style>
+            body{
+                margin: 0;
+                background-image: url(cloudgif.gif);
+                background-position: center;
+                
+                
+            }
+            .box{
+                position: absolute;
+                top: 500px;
+                animation-name: a1;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+
+            }
+            @keyframes a1 {
+                0%
+                {
+                    top: 500;
+                    left: 100;
+                }
+                10%
+                {
+                    top: 300;
+                    left: 200;
+                }
+                20%
+                {
+                    top:200 ;
+                    left: 400;
+                }
+                30%
+                {
+                    top: 100;
+                    left: 500;
+                }
+                40%
+                {
+                    top: 200;
+                    left: 600;
+                    
+                }
+                50%
+                {
+                    top: 300;
+                    left: 700;
+                    
+                }
+                60%
+                {
+                    top: 400;
+                    left: 800;
+                }
+                70%
+                {
+                    top: 300;
+                    left: 900;
+                }
+                80%
+                {
+                    top: 200;
+                    left: 1000;
+                }
+                90%
+                {
+                    top: 100;
+                    left: 1100;
+                }
+                100%
+                {
+                    top: 50;
+                    left: 1300;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"><img src="bird.gif" width="200px" height="300px"></div>
+    </body>
+</html>

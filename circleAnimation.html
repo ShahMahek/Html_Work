@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Circle Animation</title>
+        <style>
+            .main{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                display: flex;
+            }
+            .box1{
+                height: 200px;
+                width: 200px;
+                border: 10px solid rgba(0, 0, 0, 0.37);
+                border-radius: 50%;
+                border-top-color: red;
+                animation: circle 2s linear infinite;
+            }
+            .box2{
+                height: 200px;
+                width: 200px;
+                border: 10px solid rgba(0, 0, 0, 0.37);
+                border-radius: 50%;
+                border-top-color: red;
+                animation: circle 2s linear infinite;
+            }
+            .box3{
+                height: 200px;
+                width: 200px;
+                border: 10px solid rgba(0, 0, 0, 0.37);
+                border-radius: 50%;
+                border-top-color: red;
+                animation: circle 2s linear infinite;
+            }
+
+            @keyframes circle {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        </style>
+    </head>
+    <body>
+       <div class="main">
+           <div class="box1"></div>
+           <div class="box2"></div>
+           <div class="box3"></div>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Bulb</title>
+        <style>
+            #box1{
+                position: absolute;
+                left: 100;
+               
+            }
+        </style>
+    </head>
+    <div >
+        <img src="BulbOff.jpg" height="500px" width="250px" id="box1">
+        <button onclick="On()">On</button>
+    </div><br><br>
+    <button onclick="Off()">Off</button>
+
+    <script>
+        function On()
+        {
+            document.getElementById("box1").src="BulbOn.jpg" 
+        }
+        function Off()
+        {
+          document.getElementById("box1").src="BulbOff.jpg"
+        }
+
+    </script>
+</html>
